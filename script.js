@@ -1,4 +1,4 @@
-const rattingBtn = document.querySelectorAll(".rating-btn");
+const ratingBtn = document.querySelectorAll(".rating-btn");
 const subBtn = document.querySelector(".sub-btn");
 const container = document.querySelector(".container");
 const thankYou = document.getElementById("thank-you");
@@ -6,19 +6,19 @@ const para = document.getElementById("para");
 
 let selectedRating = "";
 
-rattingBtn.forEach((btn)=>{
+ratingBtn.forEach((btn)=>{
   btn.addEventListener("click",()=>{
-    selectinedRatting = btn.textContent;
+    selectedRating = btn.textContent;
   })
 });
 
 subBtn.addEventListener("click",()=>{
-  if(selectinedRatting === ""){
+  if(selectedRating === ""){
     alert("Please select a rating first");
     return;
   }
   container.style.display = "none";
   thankYou.style.display = "block";
 
-  para.textContent = `You selected ${selectinedRatting} out of 5`
+  para.textContent = `You selected ${selectedRating} out of 5`
 });
