@@ -4,7 +4,7 @@ const container = document.querySelector(".container");
 const thankYou = document.getElementById("thank-you");
 const para = document.getElementById("para");
 
-let selectinedRatting = "";
+let selectedRating = "";
 
 rattingBtn.forEach((btn)=>{
   btn.addEventListener("click",()=>{
